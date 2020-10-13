@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <form #registerform="ngForm" (ngSubmit)="Product()">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="name" class="form-control"  placeholder="Enter name" name="name" [(ngModel)]="product.name">
+      </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="price" class="form-control"  placeholder="Enter price" name="price" [(ngModel)]="product.price">
+    </div>
+    <div class="form-group">
+      <label for="avatar">Avatar:</label>
+      <input type="avatar" class="form-control" placeholder="Enter avatar" name="avatar" [(ngModel)]="product.avatar">
+    </div>
+    <div class="form-group">
+        <label for="quantity">quantity:</label>
+        <input type="quantity" class="form-control"  placeholder="Enter quantity" name="quantity" [(ngModel)]="product.quantity">
+      </div>
+    <button type="submit" class="btn btn-info" >Add</button>
+  </form>
+</div>
+<small class="danger">{{msg}}</small>
+</body>
+</html>
